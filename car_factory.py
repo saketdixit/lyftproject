@@ -19,7 +19,7 @@ class CarFactory():
         return car
     
     def create_glissade(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
-        engine = CapuletEngine(last_service_date, current_mileage, last_service_mileage)
+        engine = WilloughbyEngine(last_service_date, current_mileage, last_service_mileage)
         battery = SpindlerBattery(last_service_date, current_date)
         car = Car(engine, battery)
         return car
@@ -31,13 +31,13 @@ class CarFactory():
         return car
 
     def create_rorschach(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
-        engine = CapuletEngine(last_service_date, current_mileage, last_service_mileage)
+        engine = WilloughbyEngine(last_service_date, current_mileage, last_service_mileage)
         battery = NubbinBattery(last_service_date, current_date)
         car = Car(engine, battery)
         return car
 
     def create_thovex(current_date: date, last_service_date: date, current_mileage: int, last_service_mileage: int) -> Car:
-        engine = WilloughbyEngine(last_service_date, current_mileage, last_service_mileage)
+        engine = CapuletEngine(last_service_date, current_mileage, last_service_mileage)
         battery = SpindlerBattery(last_service_date, current_date)
         car = Car(engine, battery)
         return car
