@@ -1,10 +1,5 @@
-from car import Car
+from abc import ABC
 
-class Battery(Car):
-    def __init__(self):
-        pass
+class Battery(ABC):
     def needs_service(self):
-        return self.needs_service()
-        
-
-        
+        pass
